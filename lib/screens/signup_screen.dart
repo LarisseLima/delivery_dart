@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:lima_delivery/models/user_model.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -24,7 +25,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           title: Text("Criar Conta"),
           centerTitle: true,
         ),
-        body: ScopedModelDescendant(
+        body: ScopedModelDescendant<UserModel>(
           builder: (context, child, model) {
             if (model.isLoading)
               return Center(
